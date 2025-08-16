@@ -1,0 +1,135 @@
+/* Stage Plan Widget Styles */
+.stagePlan {
+    padding: 80px 5%;
+    background: #0a0e16;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #00f5ff;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+}
+
+.stageGrid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stageItem {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    padding: 30px 25px;
+    border-radius: 15px;
+    text-align: center;
+    min-width: 180px;
+    border: 2px solid rgba(0, 245, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.stageItem:hover {
+    transform: translateY(-5px);
+}
+
+.stageItem::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #00f5ff, #ffd700);
+}
+
+.stageDay {
+    display: block;
+    font-size: 0.9rem;
+    color: #b0b8c1;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.stageDistance {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #00f5ff;
+    margin-bottom: 10px;
+}
+
+.stageType {
+    display: block;
+    font-size: 0.8rem;
+    color: #ffd700;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .stagePlan {
+        padding: 60px 5%;
+    }
+
+    .sectionTitle {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .stageGrid {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .stageItem {
+        min-width: 160px;
+        padding: 25px 20px;
+    }
+
+    .stageDistance {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .stagePlan {
+        padding: 50px 4%;
+    }
+
+    .sectionTitle {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .stageGrid {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .stageItem {
+        min-width: 140px;
+        padding: 20px 15px;
+    }
+
+    .stageDistance {
+        font-size: 1.6rem;
+    }
+
+    .stageDay {
+        font-size: 0.8rem;
+    }
+
+    .stageType {
+        font-size: 0.75rem;
+    }
+}

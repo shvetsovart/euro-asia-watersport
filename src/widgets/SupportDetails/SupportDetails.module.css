@@ -1,0 +1,158 @@
+/* Support Details Widget Styles */
+.supportDetails {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.supportImageSection {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.image {
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+    max-width: 100%;
+    height: auto;
+}
+
+.image:hover {
+    transform: scale(1.02);
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #00f5ff;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+}
+
+.supportGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.supportItem {
+    background: rgba(0, 245, 255, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 245, 255, 0.2);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.supportItem:hover {
+    transform: translateY(-3px);
+    border-color: rgba(0, 245, 255, 0.4);
+}
+
+.supportItem h3 {
+    color: #00f5ff;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.supportItem p {
+    color: #b0b8c1;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .supportDetails {
+        padding: 60px 0;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .supportImageSection {
+        margin-top: 30px;
+    }
+
+    .image {
+        width: 100% !important;
+        height: 250px !important;
+        max-width: 500px !important;
+    }
+
+    .sectionTitle {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .supportGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .supportItem {
+        padding: 25px;
+    }
+
+    .supportItem h3 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+
+    .supportItem p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 480px) {
+    .supportDetails {
+        padding: 40px 0;
+    }
+
+    .container {
+        padding: 0 12px;
+    }
+
+    .image {
+        height: 200px !important;
+        max-width: 400px !important;
+    }
+
+    .sectionTitle {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .supportGrid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .supportItem {
+        padding: 20px;
+    }
+
+    .supportItem h3 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    .supportItem p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+}
