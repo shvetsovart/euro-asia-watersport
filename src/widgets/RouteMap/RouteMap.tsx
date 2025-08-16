@@ -57,8 +57,8 @@ export const RouteMap = () => {
                                 <Image
                                     src={stage.image}
                                     alt={`Day ${stage.day} route map`}
-                                    width={300}
-                                    height={200}
+                                    width={400}
+                                    height={280}
                                     className={styles.routeImage}
                                 />
                             </div>
@@ -79,8 +79,8 @@ export const RouteMap = () => {
                             <Image
                                 src="/extreme-150/route/Total-Distance-150km.webp"
                                 alt="Total distance 150km route map"
-                                width={300}
-                                height={200}
+                                width={400}
+                                height={280}
                                 className={styles.routeImage}
                             />
                         </div>
