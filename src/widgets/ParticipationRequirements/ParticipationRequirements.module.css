@@ -26,9 +26,12 @@
 
 .requirementsGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .requirementItem {
@@ -42,9 +45,9 @@
 }
 
 .requirementItem:hover {
-    transform: translateY(-5px);
-    border-color: rgba(0, 245, 255, 0.3);
-    box-shadow: 0 10px 30px rgba(0, 245, 255, 0.1);
+    border-color: rgba(0, 245, 255, 0.4);
+    box-shadow: 0 8px 25px rgba(0, 245, 255, 0.15);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .iconWrapper {
@@ -60,8 +63,13 @@
 }
 
 .icon {
-    font-size: 2rem;
-    filter: grayscale(100%) brightness(0) invert(1);
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s ease;
+}
+
+.requirementItem:hover .icon {
+    transform: scale(1.1);
 }
 
 .requirementItem h3 {
@@ -181,6 +189,7 @@
         grid-template-columns: 1fr;
         gap: 20px;
         margin-bottom: 40px;
+        max-width: 100%;
     }
 
     .requirementItem {
@@ -194,7 +203,8 @@
     }
 
     .icon {
-        font-size: 1.5rem;
+        width: 32px;
+        height: 32px;
     }
 
     .requirementItem h3 {

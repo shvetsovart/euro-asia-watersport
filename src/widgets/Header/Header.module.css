@@ -68,8 +68,8 @@
 
 .navLink:hover {
     color: #ffffff;
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
 }
 
 .actions {
@@ -149,8 +149,8 @@
 
 .mobileNavLink:hover {
     color: #ffffff;
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
 }
 
 .mobileActions {
