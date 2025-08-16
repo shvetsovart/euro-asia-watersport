@@ -29,30 +29,41 @@
 }
 
 .supportItem {
-    background: rgba(0, 245, 255, 0.05);
+    background: rgba(0, 245, 255, 0.08);
     padding: 30px;
-    border-radius: 15px;
-    border: 1px solid rgba(0, 245, 255, 0.2);
+    border-radius: 16px;
+    border: 1px solid rgba(0, 245, 255, 0.3);
     backdrop-filter: blur(10px);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .supportItem:hover {
-    transform: translateY(-3px);
-    border-color: rgba(0, 245, 255, 0.4);
+    transform: translateY(-4px);
+    border-color: rgba(0, 245, 255, 0.5);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
 .supportItem h3 {
     color: #00f5ff;
-    font-size: 1.3rem;
+    font-family: var(--font-montserrat), sans-serif;
+    font-size: 1.4rem;
     margin-bottom: 15px;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 10px rgba(0, 245, 255, 0.3);
+    position: relative;
+    z-index: 2;
 }
 
 .supportItem p {
-    color: #b0b8c1;
-    line-height: 1.6;
-    font-size: 0.95rem;
+    color: #e2e8f0;
+    font-family: var(--font-inter), sans-serif;
+    line-height: 1.7;
+    font-size: 1rem;
+    font-weight: 400;
+    position: relative;
+    z-index: 2;
 }
 
 /* Responsive Design */

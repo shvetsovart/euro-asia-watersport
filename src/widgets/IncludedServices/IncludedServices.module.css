@@ -23,30 +23,42 @@
 }
 
 .serviceItem {
-    background: linear-gradient(135deg, #2d1b69, #11998e);
+    background: rgba(255, 215, 0, 0.08);
     padding: 30px;
-    border-radius: 15px;
+    border-radius: 16px;
     text-align: center;
-    transition: transform 0.3s ease;
-    border: 2px solid rgba(255, 215, 0, 0.3);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .serviceItem:hover {
-    transform: translateY(-5px);
-    border-color: rgba(255, 215, 0, 0.6);
+    transform: translateY(-4px);
+    border-color: rgba(255, 215, 0, 0.5);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
 .serviceItem h3 {
     color: #ffd700;
-    font-size: 1.2rem;
+    font-family: var(--font-montserrat), sans-serif;
+    font-size: 1.3rem;
     margin-bottom: 15px;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    position: relative;
+    z-index: 2;
 }
 
 .serviceItem p {
-    color: #e0e6ed;
-    line-height: 1.5;
-    font-size: 0.9rem;
+    color: #e2e8f0;
+    font-family: var(--font-inter), sans-serif;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    font-weight: 400;
+    position: relative;
+    z-index: 2;
 }
 
 /* Responsive Design */

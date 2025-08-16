@@ -41,23 +41,22 @@
 }
 
 .routeCard {
-    background: rgba(0, 245, 255, 0.05);
-    border: 1px solid rgba(0, 245, 255, 0.2);
+    background: rgba(0, 245, 255, 0.08);
+    border: 1px solid rgba(0, 245, 255, 0.3);
     border-radius: 16px;
     padding: 0;
     text-align: center;
-    transition: all 0.3s ease;
     backdrop-filter: blur(10px);
-    position: relative;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .routeCard:hover {
-    transform: translateY(-5px);
-    border-color: rgba(0, 245, 255, 0.4);
-    box-shadow: 0 20px 40px rgba(0, 245, 255, 0.1);
+    transform: translateY(-4px);
+    border-color: rgba(0, 245, 255, 0.5);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
 .imageWrapper {
@@ -126,17 +125,12 @@
 
 /* Total Distance Card Styles */
 .totalCard {
-    background: rgba(255, 215, 0, 0.1);
+    background: rgba(255, 215, 0, 0.08);
     border-color: rgba(255, 215, 0, 0.3);
 }
 
 .totalCard:hover {
     border-color: rgba(255, 215, 0, 0.5);
-    box-shadow: 0 20px 40px rgba(255, 215, 0, 0.1);
-}
-
-.totalCard::before {
-    background: linear-gradient(90deg, #ffd700, #f59e0b);
 }
 
 .totalBadge {
