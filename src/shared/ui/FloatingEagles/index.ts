@@ -1,2 +1,1 @@
-export { Button } from "./Button";
 export { FloatingEagles } from "./FloatingEagles";

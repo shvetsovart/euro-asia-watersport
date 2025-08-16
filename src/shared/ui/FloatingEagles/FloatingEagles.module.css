@@ -1,0 +1,94 @@
+/* Floating Eagles Decoration */
+.eaglesContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.eagle {
+    position: absolute;
+    pointer-events: none;
+    transition: none; /* Smooth movement handled by JavaScript */
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.5))
+            drop-shadow(0 0 40px rgba(255, 215, 0, 0.3));
+    transform-origin: center;
+}
+
+.eagleImage {
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+    filter: brightness(1.3) contrast(1.2) saturate(1.1);
+}
+
+.eagle:hover .eagleImage {
+    opacity: 0.7;
+}
+
+/* Size variants */
+.large .eagle {
+    filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.6))
+            drop-shadow(0 0 50px rgba(255, 215, 0, 0.4));
+}
+
+.large .eagleImage {
+    opacity: 0.5;
+}
+
+.medium .eagle {
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.4))
+            drop-shadow(0 0 30px rgba(255, 215, 0, 0.2));
+}
+
+.medium .eagleImage {
+    opacity: 0.4;
+}
+
+.small .eagle {
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3))
+            drop-shadow(0 0 20px rgba(255, 215, 0, 0.1));
+}
+
+.small .eagleImage {
+    opacity: 0.3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .large .eagleImage {
+        opacity: 0.3;
+    }
+    
+    .medium .eagleImage {
+        opacity: 0.25;
+    }
+    
+    .small .eagleImage {
+        opacity: 0.2;
+    }
+}
+
+@media (max-width: 480px) {
+    .large .eagleImage {
+        opacity: 0.2;
+    }
+    
+    .medium .eagleImage {
+        opacity: 0.15;
+    }
+    
+    .small .eagleImage {
+        opacity: 0.1;
+    }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    .eagle {
+        transition: none;
+    }
+}

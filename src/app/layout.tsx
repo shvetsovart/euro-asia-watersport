@@ -1,4 +1,4 @@
-import { Header } from "@/widgets";
+import { Footer, Header } from "@/widgets";
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
@@ -34,6 +34,7 @@ export default function RootLayout({
             <body className={`${inter.variable} ${montserrat.variable}`}>
                 <Header />
                 {children}
+                <Footer />
             </body>
         </html>
     );

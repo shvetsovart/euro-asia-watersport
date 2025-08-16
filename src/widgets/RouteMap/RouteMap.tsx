@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { FloatingEagles } from "@/shared/ui";
 import styles from "./RouteMap.module.css";
 
 export const RouteMap = () => {
@@ -44,6 +45,7 @@ export const RouteMap = () => {
 
     return (
         <section className={styles.routeMap}>
+            <FloatingEagles count={2} size="large" />
             <div className={styles.container}>
                 <h2 className={styles.sectionTitle}>ROUTE MAP</h2>
                 <p className={styles.subtitle}>

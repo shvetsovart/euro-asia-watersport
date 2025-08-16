@@ -1,11 +1,13 @@
 "use client";
 
+import { FloatingEagles } from "@/shared/ui";
 import Image from "next/image";
 import styles from "./EventDescription.module.css";
 
 export const EventDescription = () => {
     return (
         <section className={styles.eventDescription}>
+            <FloatingEagles count={3} size="medium" />
             <div className={styles.container}>
                 <div className={styles.content}>
                     <h2 className={styles.sectionTitle}>THE EVENT</h2>

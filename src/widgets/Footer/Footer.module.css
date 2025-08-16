@@ -1,0 +1,255 @@
+/* Footer Widget Styles */
+.footer {
+    background: linear-gradient(135deg, #0a0e16, #1a1a2e);
+    color: #fff;
+    padding: 60px 0 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.footerContent {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* Logo Section */
+.logoSection {
+    max-width: 300px;
+}
+
+.logoLink {
+    display: inline-block;
+    margin-bottom: 15px;
+    transition: opacity 0.3s ease;
+}
+
+.logoLink:hover {
+    opacity: 0.8;
+}
+
+.logo {
+    height: auto;
+    filter: brightness(1.1);
+}
+
+.logoDescription {
+    font-family: var(--font-inter), sans-serif;
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Section Titles */
+.sectionTitle {
+    font-family: var(--font-montserrat), sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #00f5ff;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* Links Section */
+.linksSection {
+    min-width: 180px;
+}
+
+.linksList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.linksList li {
+    margin-bottom: 12px;
+}
+
+.link {
+    font-family: var(--font-inter), sans-serif;
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+}
+
+.link:hover {
+    color: #00f5ff;
+}
+
+/* Contact Section */
+.contactSection {
+    min-width: 200px;
+}
+
+.contactList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contactItem {
+    margin-bottom: 15px;
+    font-family: var(--font-inter), sans-serif;
+    font-size: 0.9rem;
+}
+
+.contactLabel {
+    color: #94a3b8;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.contactLink {
+    color: #e2e8f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contactLink:hover {
+    color: #00f5ff;
+}
+
+.contactText {
+    color: #e2e8f0;
+}
+
+/* Legal Section */
+.legalSection {
+    min-width: 160px;
+}
+
+/* Bottom Bar */
+.bottomBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright {
+    font-family: var(--font-inter), sans-serif;
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+.copyright p {
+    margin: 0;
+}
+
+/* Social Links */
+.socialLinks {
+    display: flex;
+    gap: 15px;
+}
+
+.socialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #94a3b8;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+    background: rgba(0, 245, 255, 0.1);
+    border-color: rgba(0, 245, 255, 0.3);
+    color: #00f5ff;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .footerContent {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .logoSection {
+        max-width: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 0 20px;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .footerContent {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .logoSection {
+        max-width: none;
+    }
+
+    .bottomBar {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .socialLinks {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 30px 0 15px;
+    }
+
+    .container {
+        padding: 0 12px;
+    }
+
+    .footerContent {
+        gap: 25px;
+    }
+
+    .sectionTitle {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .link,
+    .contactItem {
+        font-size: 0.85rem;
+    }
+
+    .copyright {
+        font-size: 0.8rem;
+    }
+
+    .socialLink {
+        width: 36px;
+        height: 36px;
+    }
+
+    .socialLinks {
+        gap: 12px;
+    }
+}

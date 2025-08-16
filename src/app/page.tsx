@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/shared/ui";
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 
@@ -39,9 +40,12 @@ export default function Home() {
                     </div>
                 </div>
                 <div className={styles.heroImage}>
-                    <img
+                    <Image
                         src="/extreme-150/c.jpeg"
                         alt="Extreme water swimming"
+                        width={600}
+                        height={400}
+                        className={styles.heroImageElement}
                     />
                 </div>
             </section>

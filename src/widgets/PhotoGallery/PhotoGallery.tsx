@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { FloatingEagles } from "@/shared/ui";
 import styles from "./PhotoGallery.module.css";
 
 export const PhotoGallery = () => {
@@ -15,6 +16,7 @@ export const PhotoGallery = () => {
 
     return (
         <section className={styles.photoGallery}>
+            <FloatingEagles count={2} size="medium" />
             <div className={styles.container}>
                 <h2 className={styles.sectionTitle}>GALLERY</h2>
                 <p className={styles.subtitle}>
