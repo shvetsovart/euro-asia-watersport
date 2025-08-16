@@ -3,6 +3,8 @@ export { Header } from "./Header";
 export { HeroSection } from "./HeroSection";
 export { IncludedServices } from "./IncludedServices";
 export { ParticipationRequirements } from "./ParticipationRequirements";
+export { PhotoGallery } from "./PhotoGallery";
 export { RegistrationForm } from "./RegistrationForm";
+export { RouteMap } from "./RouteMap";
 export { StagePlan } from "./StagePlan";
 export { SupportDetails } from "./SupportDetails";

@@ -10,24 +10,6 @@
     padding: 0 24px;
 }
 
-.supportImageSection {
-    margin-top: 40px;
-    text-align: center;
-}
-
-.image {
-    border-radius: 16px;
-    object-fit: cover;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease;
-    max-width: 100%;
-    height: auto;
-}
-
-.image:hover {
-    transform: scale(1.02);
-}
-
 .sectionTitle {
     font-size: 2.5rem;
     font-weight: 700;
@@ -83,16 +65,6 @@
         padding: 0 16px;
     }
 
-    .supportImageSection {
-        margin-top: 30px;
-    }
-
-    .image {
-        width: 100% !important;
-        height: 250px !important;
-        max-width: 500px !important;
-    }
-
     .sectionTitle {
         font-size: 2rem;
         margin-bottom: 40px;
@@ -125,11 +97,6 @@
 
     .container {
         padding: 0 12px;
-    }
-
-    .image {
-        height: 200px !important;
-        max-width: 400px !important;
     }
 
     .sectionTitle {

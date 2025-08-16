@@ -1,7 +1,6 @@
 "use client";
 
 import { SupportItem } from "@/entities/Challenge";
-import Image from "next/image";
 import styles from "./SupportDetails.module.css";
 
 interface SupportDetailsProps {
@@ -21,16 +20,6 @@ export const SupportDetails = ({ supportItems }: SupportDetailsProps) => {
                             <p>{item.description}</p>
                         </div>
                     ))}
-                </div>
-
-                <div className={styles.supportImageSection}>
-                    <Image
-                        src="/extreme-150/c.jpeg"
-                        alt="Professional support team"
-                        width={600}
-                        height={400}
-                        className={styles.image}
-                    />
                 </div>
             </div>
         </section>

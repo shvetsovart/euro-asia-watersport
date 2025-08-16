@@ -6,7 +6,9 @@ import {
     HeroSection,
     IncludedServices,
     ParticipationRequirements,
+    PhotoGallery,
     RegistrationForm,
+    RouteMap,
     SupportDetails,
 } from "@/widgets";
 import styles from "./page.module.css";
@@ -30,9 +32,13 @@ export default function Challenge150Camp() {
 
             <EventDescription />
 
+            <RouteMap />
+
             <SupportDetails supportItems={challenge150Camp.supportDetails} />
 
             <IncludedServices services={challenge150Camp.includedServices} />
+
+            <PhotoGallery />
 
             <ParticipationRequirements />
 
