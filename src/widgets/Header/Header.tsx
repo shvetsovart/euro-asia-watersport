@@ -1,13 +1,15 @@
 "use client";
 
 import { Button } from "@/shared/ui";
+import { SignInButton, SignUpButton, UserButton, useUser } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
-import { FC, useState } from "react";
+import { useState } from "react";
 import styles from "./Header.module.css";
 
-export const Header: FC = () => {
+export function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const { isSignedIn } = useUser();
 
     return (
         <header className={styles.header}>
@@ -64,12 +66,14 @@ export const Header: FC = () => {
 
                 {/* Desktop Actions */}
                 <div className={styles.actions}>
-                    <Button variant="outline" size="sm">
-                        Sign In
-                    </Button>
-                    <Button variant="primary" size="sm">
-                        Sign Up
-                    </Button>
+                    {isSignedIn ? (
+                        <UserButton />
+                    ) : (
+                        <>
+                            <SignInButton />
+                            <SignUpButton />
+                        </>
+                    )}
                 </div>
             </div>
 
@@ -111,4 +115,4 @@ export const Header: FC = () => {
             )}
         </header>
     );
-};
+}
