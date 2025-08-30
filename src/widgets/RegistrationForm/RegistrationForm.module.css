@@ -17,9 +17,13 @@
     z-index: 1;
 }
 
-.registrationForm {
+.formWrapper {
     max-width: 500px;
     margin: 0 auto;
+    position: relative;
+}
+
+.registrationForm {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -75,6 +79,32 @@
     box-shadow: 0 8px 25px rgba(0, 245, 255, 0.5);
 }
 
+/* Overlay styles */
+.overlay {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    border-radius: 15px;
+    pointer-events: all;
+}
+
+.overlayText {
+    font-family: var(--font-montserrat), sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(0, 245, 255, 0.4);
+    text-shadow: 0 0 20px rgba(0, 245, 255, 0.1);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .registrationSection {
@@ -86,9 +116,17 @@
         margin-bottom: 40px;
     }
 
-    .registrationForm {
+    .formWrapper {
         max-width: 400px;
+    }
+
+    .registrationForm {
         gap: 18px;
+    }
+
+    .overlayText {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
     }
 
     .formInput,
@@ -114,9 +152,17 @@
         margin-bottom: 30px;
     }
 
-    .registrationForm {
+    .formWrapper {
         max-width: 100%;
+    }
+
+    .registrationForm {
         gap: 15px;
+    }
+
+    .overlayText {
+        font-size: 2rem;
+        letter-spacing: 1px;
     }
 
     .formInput,

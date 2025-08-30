@@ -39,50 +39,58 @@ export const RegistrationForm = ({ onSubmit }: RegistrationFormProps) => {
         <section className={styles.registrationSection}>
             <RussianFlag />
             <h2 className={styles.sectionTitle}>REGISTER NOW</h2>
-            <form className={styles.registrationForm} onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    name="fullName"
-                    placeholder="Full Name"
-                    className={styles.formInput}
-                    value={formData.fullName}
-                    onChange={handleChange}
-                    required
-                />
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="Email Address"
-                    className={styles.formInput}
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                />
-                <input
-                    type="tel"
-                    name="phone"
-                    placeholder="Phone Number"
-                    className={styles.formInput}
-                    value={formData.phone}
-                    onChange={handleChange}
-                    required
-                />
-                <textarea
-                    name="experience"
-                    placeholder="Swimming Experience"
-                    className={styles.formTextarea}
-                    value={formData.experience}
-                    onChange={handleChange}
-                />
-                <Button
-                    type="submit"
-                    variant="primary"
-                    size="lg"
-                    className={styles.submitButton}
+            <div className={styles.formWrapper}>
+                <form
+                    className={styles.registrationForm}
+                    onSubmit={handleSubmit}
                 >
-                    SUBMIT APPLICATION
-                </Button>
-            </form>
+                    <input
+                        type="text"
+                        name="fullName"
+                        placeholder="Full Name"
+                        className={styles.formInput}
+                        value={formData.fullName}
+                        onChange={handleChange}
+                        required
+                    />
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Email Address"
+                        className={styles.formInput}
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                    />
+                    <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Phone Number"
+                        className={styles.formInput}
+                        value={formData.phone}
+                        onChange={handleChange}
+                        required
+                    />
+                    <textarea
+                        name="experience"
+                        placeholder="Swimming Experience"
+                        className={styles.formTextarea}
+                        value={formData.experience}
+                        onChange={handleChange}
+                    />
+                    <Button
+                        type="submit"
+                        variant="primary"
+                        size="lg"
+                        className={styles.submitButton}
+                    >
+                        SUBMIT APPLICATION
+                    </Button>
+                </form>
+                <div className={styles.overlay}>
+                    <span className={styles.overlayText}>Soon</span>
+                </div>
+            </div>
         </section>
     );
 };
