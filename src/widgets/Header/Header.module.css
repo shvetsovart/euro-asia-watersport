@@ -75,6 +75,21 @@
 .actions {
     display: flex;
     gap: 12px;
+    align-items: center;
+}
+
+/* Стилизация UserButton от Clerk */
+.actions :global(.cl-userButtonTrigger) {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.2s ease;
+}
+
+.actions :global(.cl-userButtonTrigger:hover) {
+    border-color: rgba(0, 245, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 245, 255, 0.3);
 }
 
 /* Mobile Menu Styles */
@@ -163,6 +178,21 @@
 .mobileActions button {
     width: 100%;
     justify-content: center;
+}
+
+/* Стилизация UserButton в мобильном меню */
+.mobileActions :global(.cl-userButtonTrigger) {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    margin: 0 auto;
+    transition: all 0.2s ease;
+}
+
+.mobileActions :global(.cl-userButtonTrigger:hover) {
+    border-color: rgba(0, 245, 255, 0.6);
+    box-shadow: 0 0 15px rgba(0, 245, 255, 0.4);
 }
 
 /* Mobile Responsive Design */

@@ -1,11 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import { RussianFlag } from "@/shared/ui";
 import styles from "./ParticipationRequirements.module.css";
 
 export const ParticipationRequirements = () => {
     return (
         <section className={styles.requirements}>
+            <RussianFlag />
             <div className={styles.container}>
                 <h2 className={styles.sectionTitle}>
                     CONDITIONS FOR PARTICIPATION

@@ -1,10 +1,12 @@
-export { EventDescription } from "./EventDescription";
+export { TheEvent } from "./TheEvent";
+export { TheChallenge } from "./TheChallenge";
 export { Footer } from "./Footer";
 export { Header } from "./Header";
 export { HeroSection } from "./HeroSection";
 export { IncludedServices } from "./IncludedServices";
 export { ParticipationRequirements } from "./ParticipationRequirements";
 export { PhotoGallery } from "./PhotoGallery";
+export { PricingSection } from "./PricingSection";
 export { RegistrationForm } from "./RegistrationForm";
 export { RouteMap } from "./RouteMap";
 export { StagePlan } from "./StagePlan";

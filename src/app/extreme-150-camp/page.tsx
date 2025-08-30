@@ -2,11 +2,13 @@
 
 import { challenge150Camp } from "@/entities/Challenge";
 import {
-    EventDescription,
+    TheEvent,
+    TheChallenge,
     HeroSection,
     IncludedServices,
     ParticipationRequirements,
     PhotoGallery,
+    PricingSection,
     RegistrationForm,
     RouteMap,
     SupportDetails,
@@ -21,16 +23,38 @@ export default function Challenge150Camp() {
         registrationSection?.scrollIntoView({ behavior: "smooth" });
     };
 
+    const pricingData = [
+        {
+            period: "Early booking",
+            price: "358,800 ₽",
+            secondGroup: "410,000 ₽",
+            thirdGroup: "461,300 ₽",
+        },
+        {
+            period: "Standard booking",
+            price: "389,500 ₽",
+            secondGroup: "451,000 ₽",
+            thirdGroup: "492,000 ₽",
+        },
+        {
+            period: "Late booking",
+            price: "440,800 ₽",
+            secondGroup: "512,600 ₽",
+            thirdGroup: "533,100 ₽",
+        },
+    ];
+
     return (
         <div className={styles.page}>
             <HeroSection
                 title={challenge150Camp.title}
                 subtitle={challenge150Camp.subtitle}
-                backgroundImage={challenge150Camp.backgroundImage}
                 onRegisterClick={handleRegisterClick}
             />
 
-            <EventDescription />
+            <TheEvent />
+
+            <TheChallenge />
 
             <RouteMap />
 
@@ -39,6 +63,13 @@ export default function Challenge150Camp() {
             <IncludedServices services={challenge150Camp.includedServices} />
 
             <PhotoGallery />
+
+            <PricingSection
+                title="Participation Cost"
+                subtitle="Prices depend on booking time and number of participants"
+                pricingData={pricingData}
+                showAccompanying={false}
+            />
 
             <ParticipationRequirements />
 

@@ -1,14 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { FloatingEagles } from "@/shared/ui";
+import { FloatingEagles, RussianFlag } from "@/shared/ui";
 import styles from "./PhotoGallery.module.css";
 
 export const PhotoGallery = () => {
     const images = [
         "/extreme-150/1.jpg",
         "/extreme-150/2.jpg",
-        "/extreme-150/3.jpeg",
+        "/extreme-150/boat.jpeg",
         "/extreme-150/4.jpg",
         "/extreme-150/5.jpeg",
         "/extreme-150/6.jpeg",
@@ -16,6 +16,7 @@ export const PhotoGallery = () => {
 
     return (
         <section className={styles.photoGallery}>
+            <RussianFlag />
             <FloatingEagles count={2} size="medium" />
             <div className={styles.container}>
                 <h2 className={styles.sectionTitle}>GALLERY</h2>

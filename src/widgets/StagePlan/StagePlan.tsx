@@ -1,6 +1,7 @@
 "use client";
 
 import { Stage } from "@/entities/Challenge";
+import { RussianFlag } from "@/shared/ui";
 import styles from "./StagePlan.module.css";
 
 interface StagePlanProps {
@@ -10,6 +11,7 @@ interface StagePlanProps {
 export const StagePlan = ({ stages }: StagePlanProps) => {
     return (
         <section className={styles.stagePlan}>
+            <RussianFlag />
             <h2 className={styles.sectionTitle}>STAGE PLAN</h2>
             <div className={styles.stageGrid}>
                 {stages.map((stage) => (

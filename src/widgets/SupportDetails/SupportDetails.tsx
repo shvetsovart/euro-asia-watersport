@@ -1,6 +1,7 @@
 "use client";
 
 import { SupportItem } from "@/entities/Challenge";
+import { RussianFlag } from "@/shared/ui";
 import styles from "./SupportDetails.module.css";
 
 interface SupportDetailsProps {
@@ -10,6 +11,7 @@ interface SupportDetailsProps {
 export const SupportDetails = ({ supportItems }: SupportDetailsProps) => {
     return (
         <section className={styles.supportDetails}>
+            <RussianFlag />
             <div className={styles.container}>
                 <h2 className={styles.sectionTitle}>SUPPORT DETAILS</h2>
 

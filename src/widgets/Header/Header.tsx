@@ -22,6 +22,7 @@ export function Header() {
                             width={150}
                             height={40}
                             className={styles.logoImage}
+                            style={{ height: "auto" }}
                         />
                     </Link>
                 </div>
@@ -70,8 +71,16 @@ export function Header() {
                         <UserButton />
                     ) : (
                         <>
-                            <SignInButton />
-                            <SignUpButton />
+                            <SignInButton mode="modal">
+                                <Button variant="outline" size="sm">
+                                    Login
+                                </Button>
+                            </SignInButton>
+                            <SignUpButton mode="modal">
+                                <Button variant="primary" size="sm">
+                                    Register
+                                </Button>
+                            </SignUpButton>
                         </>
                     )}
                 </div>
@@ -103,12 +112,22 @@ export function Header() {
                             Extreme 150K Camp
                         </Link>
                         <div className={styles.mobileActions}>
-                            <Button variant="outline" size="sm">
-                                Sign In
-                            </Button>
-                            <Button variant="primary" size="sm">
-                                Sign Up
-                            </Button>
+                            {isSignedIn ? (
+                                <UserButton />
+                            ) : (
+                                <>
+                                    <SignInButton mode="modal">
+                                        <Button variant="outline" size="sm">
+                                            Login
+                                        </Button>
+                                    </SignInButton>
+                                    <SignUpButton mode="modal">
+                                        <Button variant="primary" size="sm">
+                                            Register
+                                        </Button>
+                                    </SignUpButton>
+                                </>
+                            )}
                         </div>
                     </nav>
                 </div>

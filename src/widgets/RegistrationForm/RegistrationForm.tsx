@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/shared/ui";
+import { Button, RussianFlag } from "@/shared/ui";
 import { useState } from "react";
 import styles from "./RegistrationForm.module.css";
 
@@ -37,6 +37,7 @@ export const RegistrationForm = ({ onSubmit }: RegistrationFormProps) => {
 
     return (
         <section className={styles.registrationSection}>
+            <RussianFlag />
             <h2 className={styles.sectionTitle}>REGISTER NOW</h2>
             <form className={styles.registrationForm} onSubmit={handleSubmit}>
                 <input

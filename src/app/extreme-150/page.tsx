@@ -2,11 +2,13 @@
 
 import { challenge150Solo } from "@/entities/Challenge";
 import {
-    EventDescription,
+    TheEvent,
+    TheChallenge,
     HeroSection,
     IncludedServices,
     ParticipationRequirements,
     PhotoGallery,
+    PricingSection,
     RegistrationForm,
     RouteMap,
     SupportDetails,
@@ -21,16 +23,41 @@ export default function Challenge150Solo() {
         registrationSection?.scrollIntoView({ behavior: "smooth" });
     };
 
+    const pricingData = [
+        {
+            period: "Early booking",
+            price: "143,500 ₽",
+            secondGroup: "199,900 ₽",
+            thirdGroup: "287,000 ₽",
+            accompanying: "66,600 ₽",
+        },
+        {
+            period: "Standard booking",
+            price: "174,300 ₽",
+            secondGroup: "256,300 ₽",
+            thirdGroup: "328,000 ₽",
+            accompanying: "87,100 ₽",
+        },
+        {
+            period: "Late booking",
+            price: "215,300 ₽",
+            secondGroup: "302,400 ₽",
+            thirdGroup: "379,300 ₽",
+            accompanying: "112,800 ₽",
+        },
+    ];
+
     return (
         <div className={styles.page}>
             <HeroSection
                 title={challenge150Solo.title}
                 subtitle={challenge150Solo.subtitle}
-                backgroundImage={challenge150Solo.backgroundImage}
                 onRegisterClick={handleRegisterClick}
             />
 
-            <EventDescription />
+            <TheEvent />
+
+            <TheChallenge />
 
             <RouteMap />
 
@@ -39,6 +66,13 @@ export default function Challenge150Solo() {
             <IncludedServices services={challenge150Solo.includedServices} />
 
             <PhotoGallery />
+
+            <PricingSection
+                title="Participation Cost"
+                subtitle="Prices depend on booking time and number of participants"
+                pricingData={pricingData}
+                showAccompanying={true}
+            />
 
             <ParticipationRequirements />
 

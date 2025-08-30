@@ -1,0 +1,128 @@
+/* The Event Widget Styles */
+.theEvent {
+    background: #0a0e16;
+    padding: 80px 0;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.sectionTitle {
+    font-family: var(--font-montserrat), sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    background: linear-gradient(45deg, #00f5ff, #0080ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 2px;
+}
+
+.imageGallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.galleryImage {
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.galleryImage:hover {
+    transform: scale(1.05);
+}
+
+.description {
+    font-family: var(--font-inter), sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e0e6ed;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.description p {
+    margin-bottom: 20px;
+}
+
+.description strong {
+    color: #00f5ff;
+    font-weight: 600;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .theEvent {
+        padding: 60px 0;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .sectionTitle {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .imageGallery {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .galleryImage {
+        width: 100% !important;
+        max-width: 350px !important;
+        height: 220px !important;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .theEvent {
+        padding: 40px 0;
+    }
+
+    .container {
+        padding: 0 12px;
+    }
+
+    .sectionTitle {
+        font-size: 1.8rem;
+    }
+
+    .imageGallery {
+        gap: 15px;
+    }
+
+    .galleryImage {
+        width: 100% !important;
+        max-width: 300px !important;
+        height: 180px !important;
+    }
+}

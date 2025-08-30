@@ -3,12 +3,15 @@
     background: linear-gradient(135deg, #0a0e16 0%, #162030 100%);
     padding: 80px 0;
     color: white;
+    position: relative;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
+    position: relative;
+    z-index: 1;
 }
 
 .sectionTitle {

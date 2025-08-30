@@ -2,12 +2,15 @@
 .supportDetails {
     padding: 80px 0;
     background: linear-gradient(135deg, #1a1a2e, #16213e);
+    position: relative;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
+    position: relative;
+    z-index: 1;
 }
 
 .sectionTitle {

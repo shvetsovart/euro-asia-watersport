@@ -1,0 +1,240 @@
+/* PricingSection widget styles */
+.pricingSection {
+    padding: 80px 0;
+    background: linear-gradient(
+        135deg,
+        rgba(10, 14, 22, 0.95) 0%,
+        rgba(15, 23, 42, 0.95) 50%,
+        rgba(10, 14, 22, 0.95) 100%
+    );
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+.pricingSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(0, 245, 255, 0.05) 0%,
+        transparent 70%
+    );
+    pointer-events: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 16px 0;
+    text-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+}
+
+.subtitle {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.pricingGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.pricingCard {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 245, 255, 0.2);
+    border-radius: 16px;
+    padding: 32px 24px;
+    backdrop-filter: blur(20px);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricingCard::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 245, 255, 0.8) 0%,
+        rgba(0, 200, 255, 0.8) 100%
+    );
+}
+
+.pricingCard:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0, 245, 255, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 245, 255, 0.1);
+}
+
+.periodHeader {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.period {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgba(0, 245, 255, 0.9);
+    margin: 0;
+    text-shadow: 0 0 10px rgba(0, 245, 255, 0.3);
+}
+
+.priceList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.priceItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+}
+
+.priceItem:last-child {
+    border-bottom: none;
+}
+
+.priceItem:hover {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    padding: 12px 8px;
+}
+
+.priceLabel {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    flex: 1;
+    line-height: 1.4;
+}
+
+.priceValue {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(0, 245, 255, 0.4);
+}
+
+.accompaniedItem {
+    border-top: 1px solid rgba(0, 245, 255, 0.2);
+    margin-top: 8px;
+    padding-top: 20px;
+}
+
+.accompaniedItem .priceLabel {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+}
+
+.accompaniedItem .priceValue {
+    color: rgba(0, 245, 255, 0.8);
+}
+
+.disclaimer {
+    text-align: center;
+    margin-top: 32px;
+}
+
+.disclaimer p {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+    font-style: italic;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .pricingSection {
+        padding: 60px 0;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .header {
+        margin-bottom: 40px;
+    }
+
+    .pricingGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .pricingCard {
+        padding: 24px 20px;
+    }
+
+    .priceItem {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .priceLabel {
+        font-size: 0.85rem;
+    }
+
+    .priceValue {
+        font-size: 1rem;
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricingSection {
+        padding: 48px 0;
+    }
+
+    .container {
+        padding: 0 12px;
+    }
+
+    .pricingCard {
+        padding: 20px 16px;
+    }
+
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+}
