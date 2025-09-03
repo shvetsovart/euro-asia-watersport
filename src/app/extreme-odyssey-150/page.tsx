@@ -53,6 +53,7 @@ export default function Challenge150Camp() {
                 title={challenge150Camp.title}
                 subtitle={challenge150Camp.subtitle}
                 onRegisterClick={handleRegisterClick}
+                showLogo={true}
             />
 
             <TheEvent />

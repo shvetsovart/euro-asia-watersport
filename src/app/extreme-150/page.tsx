@@ -53,6 +53,7 @@ export default function Challenge150Solo() {
                 title={challenge150Solo.title}
                 subtitle={challenge150Solo.subtitle}
                 onRegisterClick={handleRegisterClick}
+                showLogo={true}
             />
 
             <TheEvent />

@@ -39,8 +39,8 @@ export default function Home() {
                             <Image
                                 src="/water-sport-logo.webp"
                                 alt="Euro-Asia Water Sport Logo"
-                                width={600}
-                                height={300}
+                                width={800}
+                                height={400}
                                 className={`${styles.heroLogo} ${
                                     isLogoVisible
                                         ? styles.logoVisible
