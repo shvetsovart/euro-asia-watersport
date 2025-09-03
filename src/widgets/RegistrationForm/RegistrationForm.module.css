@@ -97,12 +97,13 @@
 
 .overlayText {
     font-family: var(--font-montserrat), sans-serif;
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 1.5rem;
+    font-weight: 600;
     color: rgba(0, 245, 255, 0.4);
     text-shadow: 0 0 20px rgba(0, 245, 255, 0.1);
-    letter-spacing: 3px;
-    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 1.4;
 }
 
 /* Responsive Design */
@@ -125,8 +126,8 @@
     }
 
     .overlayText {
-        font-size: 2.5rem;
-        letter-spacing: 2px;
+        font-size: 1.2rem;
+        letter-spacing: 0.5px;
     }
 
     .formInput,
@@ -161,8 +162,8 @@
     }
 
     .overlayText {
-        font-size: 2rem;
-        letter-spacing: 1px;
+        font-size: 1rem;
+        letter-spacing: 0.5px;
     }
 
     .formInput,

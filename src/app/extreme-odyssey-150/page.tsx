@@ -25,22 +25,25 @@ export default function Challenge150Camp() {
 
     const pricingData = [
         {
-            period: "Early booking",
-            price: "358,800 ₽",
-            secondGroup: "410,000 ₽",
-            thirdGroup: "461,300 ₽",
+            period: "September – December",
+            price: "133,000 ₽",
+            secondGroup: "185,000 ₽",
+            thirdGroup: "266,000 ₽",
+            accompanying: "62,000 ₽",
         },
         {
-            period: "Standard booking",
-            price: "389,500 ₽",
-            secondGroup: "451,000 ₽",
-            thirdGroup: "492,000 ₽",
+            period: "January – March",
+            price: "162,000 ₽",
+            secondGroup: "238,000 ₽",
+            thirdGroup: "304,000 ₽",
+            accompanying: "81,000 ₽",
         },
         {
-            period: "Late booking",
-            price: "440,800 ₽",
-            secondGroup: "512,600 ₽",
-            thirdGroup: "533,100 ₽",
+            period: "April – July",
+            price: "199,000 ₽",
+            secondGroup: "280,000 ₽",
+            thirdGroup: "352,000 ₽",
+            accompanying: "105,000 ₽",
         },
     ];
 
@@ -68,7 +71,7 @@ export default function Challenge150Camp() {
                 title="Participation Cost"
                 subtitle="Prices depend on booking time and number of participants"
                 pricingData={pricingData}
-                showAccompanying={false}
+                showAccompanying={true}
             />
 
             <ParticipationRequirements />

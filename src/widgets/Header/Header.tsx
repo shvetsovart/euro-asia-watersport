@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import styles from "./Header.module.css";
+import { PAGE_PATHNAME } from "@/shared/constants";
 
 export function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -32,7 +33,7 @@ export function Header() {
                     <ul className={styles.navList}>
                         <li>
                             <Link
-                                href="/extreme-150"
+                                href={PAGE_PATHNAME.Extreme150}
                                 className={styles.navLink}
                             >
                                 Extreme 150K
@@ -40,10 +41,10 @@ export function Header() {
                         </li>
                         <li>
                             <Link
-                                href="/extreme-150-camp"
+                                href={PAGE_PATHNAME.ExtremeOdyssey}
                                 className={styles.navLink}
                             >
-                                Extreme 150K Camp
+                                Extreme Odyssey 150K
                             </Link>
                         </li>
                     </ul>

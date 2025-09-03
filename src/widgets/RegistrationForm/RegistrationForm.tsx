@@ -38,7 +38,7 @@ export const RegistrationForm = ({ onSubmit }: RegistrationFormProps) => {
     return (
         <section className={styles.registrationSection}>
             <RussianFlag />
-            <h2 className={styles.sectionTitle}>REGISTER NOW</h2>
+            <h2 className={styles.sectionTitle}>REGISTER</h2>
             <div className={styles.formWrapper}>
                 <form
                     className={styles.registrationForm}
@@ -88,7 +88,9 @@ export const RegistrationForm = ({ onSubmit }: RegistrationFormProps) => {
                     </Button>
                 </form>
                 <div className={styles.overlay}>
-                    <span className={styles.overlayText}>Soon</span>
+                    <span className={styles.overlayText}>
+                        The registration will open in November
+                    </span>
                 </div>
             </div>
         </section>

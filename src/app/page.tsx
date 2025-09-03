@@ -3,39 +3,72 @@
 import { Button } from "@/shared/ui";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import styles from "./page.module.css";
+import { PAGE_PATHNAME } from "@/shared/constants";
 
 export default function Home() {
+    const [isLogoVisible, setIsLogoVisible] = useState(false);
+
+    useEffect(() => {
+        // Небольшая задержка для плавного появления логотипа
+        const timer = setTimeout(() => {
+            setIsLogoVisible(true);
+        }, 300);
+
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <div className={styles.page}>
             {/* Hero Section */}
             <section className={styles.hero}>
+                <video
+                    className={styles.heroVideo}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                >
+                    <source src="/beach.mp4" type="video/mp4" />
+                </video>
+                <div className={styles.heroOverlay}></div>
                 <div className={styles.heroContent}>
                     <div className={styles.heroText}>
-                        <h1 className={styles.heroTitle}>
-                            EURO-ASIA <br />
-                            WATER SPORT
-                        </h1>
+                        <div className={styles.logoContainer}>
+                            <Image
+                                src="/water-sport-logo.webp"
+                                alt="Euro-Asia Water Sport Logo"
+                                width={600}
+                                height={300}
+                                className={`${styles.heroLogo} ${
+                                    isLogoVisible
+                                        ? styles.logoVisible
+                                        : styles.logoHidden
+                                }`}
+                                priority
+                            />
+                        </div>
                         <p className={styles.heroSubtitle}>
                             The European Asia 150K Water Sport Challenge
                         </p>
                         <div className={styles.challengeButtons}>
-                            <Link href="/extreme-150">
+                            <Link href={PAGE_PATHNAME.Extreme150}>
                                 <Button
                                     variant="primary"
                                     size="lg"
                                     className={styles.challengeButton}
                                 >
-                                    EXTREME 150K SOLO CHALLENGE
+                                    EXTREME 150K SOLO
                                 </Button>
                             </Link>
-                            <Link href="/extreme-150-camp">
+                            <Link href={PAGE_PATHNAME.ExtremeOdyssey}>
                                 <Button
                                     variant="outline"
                                     size="lg"
                                     className={styles.challengeButton}
                                 >
-                                    EXTREME 150K CAMP CHALLENGE
+                                    EXTREME ODYSSEY 150K
                                 </Button>
                             </Link>
                         </div>
@@ -54,71 +87,6 @@ export default function Home() {
                         <div className={styles.statCard}>
                             <div className={styles.statNumber}>2</div>
                             <div className={styles.statLabel}>Challenges</div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Photo Mosaic */}
-                <div className={styles.photoMosaic}>
-                    <div className={styles.mosaicGrid}>
-                        <div className={`${styles.mosaicItem} ${styles.large}`}>
-                            <Image
-                                src="/extreme-150/c.jpeg"
-                                alt="Swimming challenge"
-                                fill
-                                className={styles.mosaicImage}
-                            />
-                            <div className={styles.imageOverlay}>
-                                <span>Solo Challenge</span>
-                            </div>
-                        </div>
-                        <div
-                            className={`${styles.mosaicItem} ${styles.medium}`}
-                        >
-                            <Image
-                                src="/extreme-150/a.jpeg"
-                                alt="Water sport"
-                                fill
-                                className={styles.mosaicImage}
-                            />
-                            <div className={styles.imageOverlay}>
-                                <span>150K Distance</span>
-                            </div>
-                        </div>
-                        <div className={`${styles.mosaicItem} ${styles.small}`}>
-                            <Image
-                                src="/extreme-150/b.jpeg"
-                                alt="Team challenge"
-                                fill
-                                className={styles.mosaicImage}
-                            />
-                            <div className={styles.imageOverlay}>
-                                <span>Team Spirit</span>
-                            </div>
-                        </div>
-                        <div className={`${styles.mosaicItem} ${styles.small}`}>
-                            <Image
-                                src="/extreme-150/d.jpeg"
-                                alt="Extreme conditions"
-                                fill
-                                className={styles.mosaicImage}
-                            />
-                            <div className={styles.imageOverlay}>
-                                <span>Extreme</span>
-                            </div>
-                        </div>
-                        <div
-                            className={`${styles.mosaicItem} ${styles.medium}`}
-                        >
-                            <Image
-                                src="/extreme-150/1.jpg"
-                                alt="Water adventure"
-                                fill
-                                className={styles.mosaicImage}
-                            />
-                            <div className={styles.imageOverlay}>
-                                <span>Adventure</span>
-                            </div>
                         </div>
                     </div>
                 </div>

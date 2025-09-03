@@ -32,7 +32,6 @@ export function PricingSection({
                     <h2 className={styles.title}>{title}</h2>
                     <p className={styles.subtitle}>{subtitle}</p>
                 </div>
-
                 <div className={styles.pricingGrid}>
                     {pricingData.map((pricing, index) => (
                         <div key={index} className={styles.pricingCard}>
@@ -88,10 +87,10 @@ export function PricingSection({
                         </div>
                     ))}
                 </div>
-
-                <div className={styles.disclaimer}>
+                {/* TODO: убрать в будущем, когда станет понятно, что цены не меняются*/}
+                {/* <div className={styles.disclaimer}>
                     <p>* Prices subject to change</p>
-                </div>
+                </div> */}
             </div>
         </section>
     );

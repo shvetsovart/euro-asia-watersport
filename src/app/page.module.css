@@ -7,55 +7,75 @@
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #0a0e16 0%, #1a2332 50%, #0a0e16 100%);
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 0 5%;
     position: relative;
     overflow: hidden;
 }
 
-.hero::before {
-    content: "";
+.heroVideo {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(
-        ellipse at 30% 50%,
-        rgba(0, 245, 255, 0.1) 0%,
-        transparent 50%
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(10, 14, 22, 0.8),
+        rgba(16, 32, 48, 0.7)
     );
-    pointer-events: none;
+    z-index: 1;
 }
 
 .heroContent {
-    flex: 1;
-    max-width: 700px;
+    max-width: 800px;
     z-index: 2;
     display: flex;
     flex-direction: column;
     gap: 60px;
+    position: relative;
+    text-align: center;
 }
 
 .heroText {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
-.heroTitle {
-    font-family: var(--font-montserrat), sans-serif;
-    font-size: 3.5rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    margin: 0 0 20px 0;
-    background: linear-gradient(45deg, #00f5ff, #0080ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-shadow: 0 0 30px rgba(0, 245, 255, 0.3);
+.logoContainer {
+    margin-bottom: 20px;
+}
+
+.heroLogo {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 20px rgba(0, 245, 255, 0.3));
+    transition: all 3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.logoHidden {
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
+.logoVisible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .heroSubtitle {
@@ -71,6 +91,7 @@
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .challengeButton {
@@ -152,93 +173,12 @@
     letter-spacing: 1px;
 }
 
-/* Photo Mosaic */
-.photoMosaic {
-    flex: 1;
-    max-width: 500px;
-    margin-left: 60px;
-}
-
-.mosaicGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 120px);
-    gap: 12px;
-    height: 380px;
-}
-
-.mosaicItem {
-    position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-}
-
-.mosaicItem.large {
-    grid-column: span 2;
-    grid-row: span 2;
-}
-
-.mosaicItem.medium {
-    grid-column: span 1;
-    grid-row: span 2;
-}
-
-.mosaicItem.small {
-    grid-column: span 1;
-    grid-row: span 1;
-}
-
-.mosaicImage {
-    object-fit: cover;
-    transition: all 0.4s ease;
-}
-
-.imageOverlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.7) 100%);
-    padding: 20px 16px 16px;
-    transform: translateY(100%);
-    transition: all 0.3s ease;
-}
-
-.imageOverlay span {
-    color: white;
-    font-family: var(--font-montserrat), sans-serif;
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.mosaicItem:hover {
-    transform: scale(1.02);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-    z-index: 10;
-}
-
-.mosaicItem:hover .mosaicImage {
-    transform: scale(1.1);
-}
-
-.mosaicItem:hover .imageOverlay {
-    transform: translateY(0);
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero {
-        flex-direction: column;
-        text-align: center;
         padding: 80px 5% 40px 5%;
         min-height: 100vh;
         justify-content: center;
-        gap: 40px;
     }
 
     .heroContent {
@@ -246,8 +186,8 @@
         gap: 40px;
     }
 
-    .heroText {
-        margin-bottom: 0;
+    .heroLogo {
+        max-width: 350px;
     }
 
     .statsGrid {
@@ -268,45 +208,12 @@
         font-size: 0.8rem;
     }
 
-    .photoMosaic {
-        margin-left: 0;
-        max-width: 100%;
-    }
-
-    .mosaicGrid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 100px);
-        height: 420px;
-        gap: 10px;
-    }
-
-    .mosaicItem.large {
-        grid-column: span 2;
-        grid-row: span 2;
-    }
-
-    .mosaicItem.medium {
-        grid-column: span 1;
-        grid-row: span 1;
-    }
-
-    .mosaicItem.small {
-        grid-column: span 1;
-        grid-row: span 1;
-    }
-
-    .heroTitle {
-        font-size: 2.2rem;
-        margin-bottom: 15px;
-    }
-
     .heroSubtitle {
         font-size: 1.1rem;
         margin-bottom: 30px;
     }
 
     .challengeButtons {
-        justify-content: center;
         gap: 15px;
     }
 
@@ -319,11 +226,14 @@
 @media (max-width: 480px) {
     .hero {
         padding: 70px 4% 30px 4%;
-        gap: 30px;
     }
 
     .heroContent {
         gap: 30px;
+    }
+
+    .heroLogo {
+        max-width: 280px;
     }
 
     .statsGrid {
@@ -343,46 +253,6 @@
 
     .statLabel {
         font-size: 0.75rem;
-    }
-
-    .photoMosaic {
-        max-width: 320px;
-        margin: 0 auto;
-    }
-
-    .mosaicGrid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 80px);
-        height: 260px;
-        gap: 8px;
-    }
-
-    .mosaicItem.large {
-        grid-column: span 2;
-        grid-row: span 1;
-    }
-
-    .mosaicItem.medium {
-        grid-column: span 1;
-        grid-row: span 1;
-    }
-
-    .mosaicItem.small {
-        grid-column: span 1;
-        grid-row: span 1;
-    }
-
-    .imageOverlay {
-        padding: 8px 12px;
-    }
-
-    .imageOverlay span {
-        font-size: 0.75rem;
-    }
-
-    .heroTitle {
-        font-size: 1.8rem;
-        margin-bottom: 12px;
     }
 
     .heroSubtitle {

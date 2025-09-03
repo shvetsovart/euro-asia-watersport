@@ -40,12 +40,8 @@ export const TheChallenge = () => {
                         </div>
 
                         <div className={styles.detailItem}>
-                            <h4>Available Dates</h4>
-                            <p>
-                                May, June, July, August
-                                <br />
-                                by individual arrangement
-                            </p>
+                            <h4>Date</h4>
+                            <p>4th – 8th August, 2026.</p>
                         </div>
                     </div>
 

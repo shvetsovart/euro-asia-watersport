@@ -2,7 +2,7 @@ import { Challenge } from "../types";
 
 export const challenge150Solo: Challenge = {
     id: "150-solo",
-    title: "VOLGA RIVER EXTREME",
+    title: "EXTREME 150K",
     subtitle: "150KM OPEN WATER SWIMMING",
     distance: "150KM",
     duration: "25-30 HOURS",
@@ -72,7 +72,7 @@ export const challenge150Solo: Challenge = {
 
 export const challenge150Camp: Challenge = {
     id: "150-camp",
-    title: "VOLGA RIVER TEAM",
+    title: "EXTREME 150K ODYSSEY",
     subtitle: "150KM RELAY SWIMMING",
     distance: "150KM",
     duration: "25-30 HOURS",

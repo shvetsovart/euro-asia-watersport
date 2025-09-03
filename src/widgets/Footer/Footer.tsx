@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Footer.module.css";
+import { PAGE_PATHNAME } from "@/shared/constants";
 
 export const Footer = () => {
     return (
@@ -33,7 +34,7 @@ export const Footer = () => {
                         <ul className={styles.linksList}>
                             <li>
                                 <Link
-                                    href="/extreme-150"
+                                    href={PAGE_PATHNAME.Extreme150}
                                     className={styles.link}
                                 >
                                     150KM Solo Challenge
@@ -41,10 +42,10 @@ export const Footer = () => {
                             </li>
                             <li>
                                 <Link
-                                    href="/extreme-150-camp"
+                                    href={PAGE_PATHNAME.ExtremeOdyssey}
                                     className={styles.link}
                                 >
-                                    150KM Team Challenge
+                                    150KM Odyssey Challenge
                                 </Link>
                             </li>
                         </ul>

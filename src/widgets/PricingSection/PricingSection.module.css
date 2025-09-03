@@ -202,18 +202,19 @@
     }
 
     .priceItem {
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
-        gap: 4px;
+        gap: 8px;
     }
 
     .priceLabel {
         font-size: 0.85rem;
+        flex: 1;
     }
 
     .priceValue {
         font-size: 1rem;
-        align-self: flex-end;
+        flex-shrink: 0;
     }
 }
 
