@@ -57,14 +57,15 @@ export const HeroSection = ({
                 )}
                 <h1 className={styles.heroTitle}>{title}</h1>
                 <h2 className={styles.challengeTitle}>{subtitle}</h2>
-                <Button
+                {/* :TODO: вернуть и поработать над стилями, когда регистрация откроется*/}
+                {/* <Button
                     variant="primary"
                     size="lg"
                     className={styles.registerButton}
                     onClick={onRegisterClick}
                 >
                     REGISTER NOW
-                </Button>
+                </Button> */}
 
                 <CountdownTimer />
             </div>
