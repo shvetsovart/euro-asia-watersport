@@ -13,6 +13,33 @@ export const TheEvent = () => {
                 <div className={styles.content}>
                     <h2 className={styles.sectionTitle}>THE EVENT</h2>
 
+                    <div className={styles.description}>
+                        <p>
+                            Immerse yourself in a unique long-distance swim
+                            along Europe&apos;s mightiest river –{" "}
+                            <strong>the Volga</strong>. The starting point is{" "}
+                            <strong>Saratov</strong>, a vibrant metropolis in
+                            the European part of Russia.
+                        </p>
+
+                        <p>
+                            Picturesquely located on the edge of the Volga
+                            Upland, the city stretches down to the banks of the
+                            river, which here forms the{" "}
+                            <strong>Volgograd Reservoir</strong>. The city
+                            center lies close to the river and impresses with a
+                            charming old town full of historic architectural
+                            ensembles from various eras.
+                        </p>
+
+                        <p>
+                            <strong>A highlight:</strong> the former German
+                            Street, now <strong>Ulitsa Nemetskaya</strong>,
+                            <br />
+                            better known as Kirov Prospect.
+                        </p>
+                    </div>
+
                     <div className={styles.imageGallery}>
                         <Image
                             src="/extreme-150/a.jpeg"
@@ -32,22 +59,11 @@ export const TheEvent = () => {
 
                     <div className={styles.description}>
                         <p>
-                            Experience an extraordinary swimming adventure on
-                            the mighty Volga – Europe&apos;s longest river! The
-                            course leads from the Russian metropolis{" "}
-                            <strong>Saratov to Stepana Rasina Cliff</strong>,
-                            covering a total of <strong>150 kilometers</strong>{" "}
-                            of open water swimming.
-                        </p>
-
-                        <p>
-                            Saratov, located on the banks of the Volgograd
-                            Reservoir, with its historic old town and numerous
-                            architectural highlights from various centuries,
-                            offers the ideal starting point. The city lies at
-                            the{" "}
-                            <strong>boundary between Europe and Asia</strong>{" "}
-                            and is easily accessible by car, train, or plane.
+                            Saratov naturally connects{" "}
+                            <strong>Europe and Asia</strong> – geographically,
+                            culturally, and historically. The city is easily
+                            accessible by car, train, or plane thanks to
+                            excellent transport links.
                         </p>
                     </div>
                 </div>

@@ -1,14 +1,13 @@
 "use client";
 
 import { FloatingEagles, RussianFlag } from "@/shared/ui";
-import Image from "next/image";
 import styles from "./TheChallenge.module.css";
 
 export const TheChallenge = () => {
     return (
         <section className={styles.theChallenge}>
             <RussianFlag />
-            <FloatingEagles count={2} size="medium" />
+            {/* <FloatingEagles count={2} size="medium" /> */}
             <div className={styles.container}>
                 <div className={styles.content}>
                     <h2 className={styles.sectionTitle}>THE CHALLENGE</h2>
@@ -16,7 +15,7 @@ export const TheChallenge = () => {
                     <div className={styles.detailsGrid}>
                         <div className={styles.detailItem}>
                             <h4>Total Distance</h4>
-                            <p>150 km of open water swimming</p>
+                            <p>150km of open water swimming</p>
                         </div>
 
                         <div className={styles.detailItem}>
@@ -47,23 +46,25 @@ export const TheChallenge = () => {
 
                     <div className={styles.challengeInfo}>
                         <p>
-                            This long-distance swimming event is aimed at{" "}
-                            <strong>experienced open water athletes</strong> who
-                            want to take on an extreme physical and mental
-                            challenge. The swim takes place day and night,
-                            adhering to the highest safety standards.
+                            This adventure takes you up to{" "}
+                            <strong>42 km per day</strong> through pristine open
+                            water, <br />
+                            with overnight stays in a cozy tent camp directly on
+                            the <strong>riverbank</strong>.
                         </p>
 
                         <p>
-                            You will cross open waters, relying solely on your
-                            endurance, strength, and mental fortitude – without
-                            artificial aids, staying true to the spirit of
-                            original open water swimming. The river flows at a
-                            speed of <strong>3 to 3.5 km/h</strong>, and
-                            swimmers can cover between{" "}
-                            <strong>6 km and 7 km per hour</strong>. The goal is
-                            to complete the full distance in approximately{" "}
-                            <strong>25 to 30 hours</strong>.
+                            Each day ends with an{" "}
+                            <strong>unforgettable view of the Volga</strong>, a
+                            shared dinner around the campfire, <br />
+                            and inspiring conversations with fellow swimmers
+                            from around the world.
+                        </p>
+
+                        <p>
+                            Our <strong>experienced team</strong> is by your
+                            side throughout the entire journey, ensuring your
+                            safety and unforgettable memories.
                         </p>
                     </div>
                 </div>

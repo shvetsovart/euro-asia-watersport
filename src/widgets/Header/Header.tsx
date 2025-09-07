@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/shared/ui";
-import { SignInButton, SignUpButton, UserButton, useUser } from "@clerk/nextjs";
+import { UserButton, useUser } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -10,7 +10,7 @@ import { PAGE_PATHNAME } from "@/shared/constants";
 
 export function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const { isSignedIn } = useUser();
+    const { isSignedIn, user } = useUser();
 
     return (
         <header className={styles.header}>
@@ -69,19 +69,38 @@ export function Header() {
                 {/* Desktop Actions */}
                 <div className={styles.actions}>
                     {isSignedIn ? (
-                        <UserButton />
+                        <Link href="/me" className={styles.userProfileLink}>
+                            <div className={styles.userProfile}>
+                                {user?.imageUrl ? (
+                                    <Image
+                                        src={user.imageUrl}
+                                        alt={user?.fullName || "User"}
+                                        width={32}
+                                        height={32}
+                                        className={styles.userAvatar}
+                                    />
+                                ) : (
+                                    <div className={styles.userAvatarFallback}>
+                                        {user?.firstName?.charAt(0) || "U"}
+                                    </div>
+                                )}
+                                <span className={styles.userName}>
+                                    {user?.firstName || "Profile"}
+                                </span>
+                            </div>
+                        </Link>
                     ) : (
                         <>
-                            <SignInButton mode="modal">
+                            <Link href="/sign-in">
                                 <Button variant="outline" size="sm">
                                     Login
                                 </Button>
-                            </SignInButton>
-                            <SignUpButton mode="modal">
+                            </Link>
+                            <Link href="/sign-up">
                                 <Button variant="primary" size="sm">
                                     Register
                                 </Button>
-                            </SignUpButton>
+                            </Link>
                         </>
                     )}
                 </div>
@@ -114,19 +133,46 @@ export function Header() {
                         </Link>
                         <div className={styles.mobileActions}>
                             {isSignedIn ? (
-                                <UserButton />
+                                <Link
+                                    href="/user-profile"
+                                    className={styles.userProfileLink}
+                                >
+                                    <div className={styles.userProfile}>
+                                        {user?.imageUrl ? (
+                                            <Image
+                                                src={user.imageUrl}
+                                                alt={user?.fullName || "User"}
+                                                width={32}
+                                                height={32}
+                                                className={styles.userAvatar}
+                                            />
+                                        ) : (
+                                            <div
+                                                className={
+                                                    styles.userAvatarFallback
+                                                }
+                                            >
+                                                {user?.firstName?.charAt(0) ||
+                                                    "U"}
+                                            </div>
+                                        )}
+                                        <span className={styles.userName}>
+                                            {user?.firstName || "Profile"}
+                                        </span>
+                                    </div>
+                                </Link>
                             ) : (
                                 <>
-                                    <SignInButton mode="modal">
+                                    <Link href="/sign-in">
                                         <Button variant="outline" size="sm">
                                             Login
                                         </Button>
-                                    </SignInButton>
-                                    <SignUpButton mode="modal">
+                                    </Link>
+                                    <Link href="/sign-up">
                                         <Button variant="primary" size="sm">
                                             Register
                                         </Button>
-                                    </SignUpButton>
+                                    </Link>
                                 </>
                             )}
                         </div>

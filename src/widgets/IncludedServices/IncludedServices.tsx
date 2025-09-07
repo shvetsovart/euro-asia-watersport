@@ -12,7 +12,7 @@ export const IncludedServices = ({ services }: IncludedServicesProps) => {
     return (
         <section className={styles.includedServices}>
             <RussianFlag />
-            <h2 className={styles.sectionTitle}>INCLUDED SERVICES</h2>
+            <h2 className={styles.sectionTitle}>INCLUDED IN THE PRICE</h2>
             <div className={styles.servicesGrid}>
                 {services.map((service, index) => (
                     <div key={index} className={styles.serviceItem}>

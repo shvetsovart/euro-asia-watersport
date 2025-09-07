@@ -83,60 +83,64 @@ export const challenge150Camp: Challenge = {
     ],
     supportDetails: [
         {
-            title: "Team Coordination",
+            title: "Professional Captain Escort",
             description:
-                "Professional coordination for teams of 2-3 swimmers with relay changeover rules",
+                "Each solo or relay team will be accompanied by an experienced motorboat captain",
         },
         {
-            title: "Changeover Support",
+            title: "Water-Only Changeovers",
             description:
-                "Swimmer changes only in water, each swimmer minimum 1 hour, resting members on escort boat",
+                "Swimmer changes for the relay are only permitted in the water",
         },
         {
-            title: "Team Briefing",
+            title: "Minimum Swimming Duration",
             description:
-                "Specialized team briefing covering relay rules and coordination strategies",
+                "The active swimmer must stay in the water for at least one hour (breaks are permitted) before changing",
         },
         {
-            title: "Multiple Escort Boats",
-            description:
-                "Additional escort capacity for team support and safety coordination",
+            title: "Support Boat Rest Area",
+            description: "Resting swimmers remain on the support boat",
         },
         {
-            title: "Team Communication",
+            title: "Additional Team Accompaniment",
             description:
-                "Communication systems for effective team coordination during the swim",
+                "It is possible to accompany the team of swimmers (including those swimming a relay). This option can be booked additionally (accommodation in a tent and meals)",
+        },
+        {
+            title: "Pure Swimming Challenge",
+            description:
+                "This extreme-distance challenge is aimed at endurance-trained open water athletes who consciously forgo technical aids and devote themselves to the original form of open water swimming",
         },
     ],
     includedServices: [
         {
-            title: "Team Starter Kits",
-            description:
-                "Complete starter kit for each team member including caps, shirts, towels",
+            title: "Motorboat Escort",
+            description: "Personal motorboat escort for the entire route",
         },
         {
-            title: "Team Finisher Awards",
+            title: "Return Transport",
             description:
-                "Individual trophies for each team member + team certificate",
+                "Return transport from the destination (Stepana Rasina Cliff) to Saratov",
         },
         {
-            title: "Enhanced Support",
-            description: "Extended support crew capacity for team coordination",
+            title: "Meals & Nutrition",
+            description:
+                "Breakfast, dinner, and snacks (e.g., energy gels, bars, isotonic drinks) provided as part of the event",
         },
         {
-            title: "Relay Equipment",
+            title: "Tent Accommodation",
             description:
-                "Special equipment for safe swimmer changeovers in open water",
+                "Tent accommodations are provided. Each participant must bring their own sleeping mat and sleeping bag",
         },
         {
-            title: "Team Transport",
+            title: "Tent Sauna",
             description:
-                "Group transport from finish back to Saratov for entire team",
+                "Tent sauna is provided. Meals are freshly prepared daily around a campfire",
         },
         {
-            title: "Team Documentation",
+            title: "Starter Kit",
             description:
-                "Professional documentation of team achievement and relay performance",
+                "The starter kit, including a swim cap, a T-shirt, and a towel, will also be handed out during this time",
         },
     ],
 };

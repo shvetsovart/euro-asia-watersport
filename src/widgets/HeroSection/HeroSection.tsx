@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/shared/ui";
 import { CountdownTimer } from "./CountdownTimer";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -16,7 +15,7 @@ interface HeroSectionProps {
 export const HeroSection = ({
     title,
     subtitle,
-    onRegisterClick,
+    // onRegisterClick,
     showLogo = false,
 }: HeroSectionProps) => {
     const [isLogoVisible, setIsLogoVisible] = useState(false);

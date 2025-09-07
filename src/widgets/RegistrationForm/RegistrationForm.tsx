@@ -38,7 +38,7 @@ export const RegistrationForm = ({ onSubmit }: RegistrationFormProps) => {
     return (
         <section className={styles.registrationSection}>
             <RussianFlag />
-            <h2 className={styles.sectionTitle}>REGISTER</h2>
+            <h2 className={styles.sectionTitle}>REGISTRATION</h2>
             <div className={styles.formWrapper}>
                 <form
                     className={styles.registrationForm}
