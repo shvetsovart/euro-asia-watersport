@@ -1,10 +1,15 @@
 "use client";
 
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { FloatingEagles, RussianFlag } from "@/shared/ui";
 import styles from "./RouteMap.module.css";
+import { SingleRouteMap } from "./SingleRouteMap";
 
 export const RouteMap = () => {
+    const pathname = usePathname();
+    const isOdysseyRoute = pathname === "/extreme-odyssey-150";
+
     const routeStages = [
         {
             day: 1,
@@ -53,65 +58,87 @@ export const RouteMap = () => {
             <FloatingEagles count={2} size="large" />
             <div className={styles.container}>
                 <h2 className={styles.sectionTitle}>ROUTE MAP</h2>
-                <p className={styles.subtitle}>
-                    5-Day Journey Through the Volga River - 150km Challenge
-                </p>
 
-                <div className={styles.routeGrid}>
-                    {routeStages.map((stage) => (
-                        <div key={stage.day} className={styles.routeCard}>
-                            <div className={styles.imageWrapper}>
-                                <Image
-                                    src={stage.image}
-                                    alt={`Day ${stage.day} route map`}
-                                    width={400}
-                                    height={280}
-                                    className={styles.routeImage}
-                                    style={{ height: "auto" }}
-                                />
-                            </div>
-                            <div className={styles.cardContent}>
-                                <div className={styles.dayBadge}>
-                                    Day {stage.day}
-                                </div>
-                                <h3 className={styles.routeTitle}>
-                                    {stage.route}
-                                </h3>
-                                <div className={styles.distance}>
-                                    {stage.distance}
-                                </div>
-                                <p className={styles.description}>
-                                    {stage.description}
-                                </p>
-                            </div>
-                        </div>
-                    ))}
+                {isOdysseyRoute ? (
+                    <>
+                        <p className={styles.subtitle}>
+                            5-Day Journey Through the Volga River - 150km
+                            Challenge
+                        </p>
 
-                    {/* Total Distance Card */}
-                    <div className={`${styles.routeCard} ${styles.totalCard}`}>
-                        <div className={styles.imageWrapper}>
-                            <Image
-                                src="/extreme-150/route/Total-Distance-150km.webp"
-                                alt="Total distance 150km route map"
-                                width={400}
-                                height={280}
-                                className={styles.routeImage}
-                                style={{ height: "auto" }}
-                            />
+                        <div className={styles.routeGrid}>
+                            {routeStages.map((stage) => (
+                                <div
+                                    key={stage.day}
+                                    className={styles.routeCard}
+                                >
+                                    <div className={styles.imageWrapper}>
+                                        <Image
+                                            src={stage.image}
+                                            alt={`Day ${stage.day} route map`}
+                                            width={400}
+                                            height={280}
+                                            className={styles.routeImage}
+                                            style={{ height: "auto" }}
+                                        />
+                                    </div>
+                                    <div className={styles.cardContent}>
+                                        <div className={styles.dayBadge}>
+                                            Day {stage.day}
+                                        </div>
+                                        <h3 className={styles.routeTitle}>
+                                            {stage.route}
+                                        </h3>
+                                        <div className={styles.distance}>
+                                            {stage.distance}
+                                        </div>
+                                        <p className={styles.description}>
+                                            {stage.description}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
+
+                            {/* Total Distance Card */}
+                            <div
+                                className={`${styles.routeCard} ${styles.totalCard}`}
+                            >
+                                <div className={styles.imageWrapper}>
+                                    <Image
+                                        src="/extreme-150/route/Total-Distance-150km.webp"
+                                        alt="Total distance 150km route map"
+                                        width={400}
+                                        height={280}
+                                        className={styles.routeImage}
+                                        style={{ height: "auto" }}
+                                    />
+                                </div>
+                                <div className={styles.cardContent}>
+                                    <div className={styles.totalBadge}>
+                                        TOTAL
+                                    </div>
+                                    <h3 className={styles.totalTitle}>
+                                        Complete Challenge
+                                    </h3>
+                                    <div className={styles.totalDistance}>
+                                        150 km
+                                    </div>
+                                    <p className={styles.totalDescription}>
+                                        Epic 5-day swimming adventure across the
+                                        mighty Volga River
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div className={styles.cardContent}>
-                            <div className={styles.totalBadge}>TOTAL</div>
-                            <h3 className={styles.totalTitle}>
-                                Complete Challenge
-                            </h3>
-                            <div className={styles.totalDistance}>150 km</div>
-                            <p className={styles.totalDescription}>
-                                Epic 5-day swimming adventure across the mighty
-                                Volga River
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                    </>
+                ) : (
+                    <>
+                        <p className={styles.subtitle}>
+                            150km Solo Swimming Challenge Route
+                        </p>
+                        <SingleRouteMap />
+                    </>
+                )}
             </div>
         </section>
     );

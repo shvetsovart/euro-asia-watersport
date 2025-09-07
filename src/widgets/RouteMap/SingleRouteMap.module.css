@@ -1,0 +1,65 @@
+.singleRoute {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.imageContainer {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 245, 255, 0.2);
+}
+
+.routeImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+}
+
+.description {
+    text-align: center;
+    color: #94a3b8;
+    font-family: var(--font-inter), sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.description p {
+    margin-bottom: 20px;
+}
+
+.description p:last-child {
+    margin-bottom: 0;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .imageContainer {
+        margin-bottom: 30px;
+    }
+
+    .description {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 480px) {
+    .imageContainer {
+        margin-bottom: 25px;
+        border-radius: 12px;
+    }
+
+    .routeImage {
+        border-radius: 12px;
+    }
+
+    .description {
+        font-size: 0.95rem;
+    }
+}

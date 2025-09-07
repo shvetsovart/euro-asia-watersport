@@ -1,6 +1,6 @@
 "use client";
 
-import { FloatingEagles, RussianFlag } from "@/shared/ui";
+import { RussianFlag } from "@/shared/ui";
 import styles from "./TheChallenge.module.css";
 
 export const TheChallenge = () => {
